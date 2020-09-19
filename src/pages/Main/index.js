@@ -1,12 +1,14 @@
+/* eslint-disable no-return-assign */
+/* eslint-disable react-hooks/rules-of-hooks */
 /* eslint-disable prettier/prettier */
 import React, { useState, useEffect } from 'react';
-import { StyleSheet, Text, TouchableHighlight, Alert } from 'react-native';
+import { StyleSheet, Text, TouchableHighlight, Alert, Image } from 'react-native';
 import { TextInput } from 'react-native-gesture-handler';
 import AsyncStorage from '@react-native-community/async-storage';
 import queryString from 'query-string';
 import storageConfig from '../../config/storage';
 
-import { Container, Title, TitleWrapper } from './styles';
+import { Container, TitleWrapper } from './styles';
 
 import api from '../../services/api';
 
@@ -98,7 +100,7 @@ export default function Main() {
   return (
     <Container>
       <TitleWrapper>
-        <Title>Dehpois</Title>
+        <Image source={require('../../assets/dehpois-logo.png')}/>
       </TitleWrapper>
 
       <TextInput
@@ -132,7 +134,9 @@ export default function Main() {
         underlayColor="#DDC"
         onPress={handleSendToClockIn}
       >
-        <Text>Dale!</Text>
+        <Text style={styles.buttonText}>
+          Dale!
+        </Text>
       </TouchableHighlight>
     </Container>
   );
@@ -141,20 +145,33 @@ export default function Main() {
 const styles = StyleSheet.create({
   input: {
     padding: 10,
-    borderRadius: 4,
-    marginLeft: 20,
+    borderRadius: 10,
+    marginLeft: 30,
     marginBottom: 20,
-    marginRight: 20,
-    borderWidth:0.5,
+    marginRight: 30,
+    borderWidth: 0.3,
   },
 
   button: {
-    alignItems: 'center',
-    backgroundColor: '#aaaaaa',
+    backgroundColor: '#AAAA',
     padding: 10,
-    marginTop: 20,
+    height: 50,
+    flexDirection: 'row',
     marginLeft: 100,
     marginRight: 100,
-    borderRadius: 5,
+    borderRadius: 10,
+    overflow: 'hidden',
+    alignItems: 'center',
+    marginTop: 280,
+  },
+
+  buttonText: {
+    flex: 1,
+    justifyContent: 'center',
+    textAlign: 'center',
+    color: '#FFF',
+    fontWeight: 'bold',
+    fontFamily: 'Roboto_500Medium',
+    fontSize: 16,
   },
 });
