@@ -10,6 +10,7 @@
 </p>
 
 ## Table of contents
+- [Table of contents](#table-of-contents)
 - [About the project](#about-the-project)
 - [Description](#description)
 - [Built with](#built-with)
@@ -46,6 +47,8 @@ gh repo clone zevolution/dehpois
 You will need an iOS Simulator, Android Emulator, or physical device to execute the commands below: 
 
 * Open folder of the project in the terminal and execute `npx react-native run-android` or `npx react-native run-ios`
+
+* Later execute `npx react-native start` ...and ready!!  
 
 ## Roadmap
 

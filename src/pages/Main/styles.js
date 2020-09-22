@@ -8,7 +8,7 @@ export const TitleWrapper = styled.View`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 50px;
+  padding: 100px;
 `;
 
 export const Title = styled.Text`
